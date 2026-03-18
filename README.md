@@ -61,4 +61,6 @@ Example:
 
 ```bash
 java -cp out PixelCraft Grayscale images/toronto.png
+
+java -cp out PixelCraft Rotate images/toronto.png
 ```
