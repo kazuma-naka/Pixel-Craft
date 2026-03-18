@@ -63,4 +63,6 @@ Example:
 java -cp out PixelCraft Grayscale images/toronto.png
 
 java -cp out PixelCraft Rotate images/toronto.png
+
+java -cp out PixelCraft Blur images/toronto.png
 ```
