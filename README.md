@@ -15,7 +15,6 @@ PixelCraft supports multiple image converters, including:
 - `Mirror` — mirrors the image horizontally
 - `Warmer` — makes the image warmer by increasing red tones
 - `Darker` — darkens the image
-- `Threshold` — converts the image to black and white using a threshold
 
 ## Project Structure
 
@@ -31,8 +30,7 @@ PixelCraft/
 │   ├── Invert.java
 │   ├── Mirror.java
 │   ├── Warmer.java
-│   ├── Darker.java
-│   └── Threshold.java
+│   └── Darker.java
 ├── images/
 │   └── toronto.png
 └── out/
