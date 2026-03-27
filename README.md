@@ -28,13 +28,30 @@ PixelCraft/
 │   ├── Rotate.java
 │   ├── Blur.java
 │   ├── Invert.java
-│   ├── Mirror.java
+│   ├── RecursiveMirror.java
+│   ├── RecursiveInvert.java
 │   ├── Warmer.java
 │   └── Darker.java
 ├── images/
 │   └── toronto.png
 └── out/
 ```
+
+## Class Descriptions
+
+Below are brief descriptions of the main Java classes in `src/`:
+
+- `PixelCraft.java`: The entry point. Uses reflection to instantiate the `Converter` class specified on the command line, runs the conversion, and saves the output file by appending `_<ConverterName>` to the original filename.
+- `Converter.java`: Abstract base class that handles image I/O, provides utility helpers (`createEmptyImage`, `clamp`), and defines the abstract `process` method implemented by each converter.
+- `ARGB.java`: Utility for decomposing an integer ARGB pixel into alpha, red, green, and blue channels and reassembling them back into an `int` pixel value.
+- `Grayscale.java`: Converts an image to grayscale by averaging the red, green, and blue channels for each pixel.
+- `Rotate.java`: Rotates the image 90 degrees clockwise (output width and height are swapped).
+- `Blur.java`: Applies a simple 3x3 box blur by averaging neighboring pixels' ARGB components, with boundary checks at the image edges.
+- `Invert.java`: Inverts the color of each pixel by replacing each channel with `255 - value`.
+- `RecursiveInvert.java`: Inverts the entire image's colors; implemented with a helper that processes pixels by scanning rows and columns.
+- `RecursiveMirror.java`: Mirrors the image horizontally using recursive row/column processing.
+- `Warmer.java`: Makes the image appear warmer by increasing the red channel (e.g., +30) and decreasing the blue channel (e.g., -20), with values clamped to the 0–255 range.
+- `Darker.java`: Darkens the image by scaling each color channel down (implemented by multiplying channels by 0.7).
 
 ## Requirements
 
