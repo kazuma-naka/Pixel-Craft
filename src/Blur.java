@@ -1,9 +1,5 @@
 import java.awt.image.BufferedImage;
 
-/**
- * Applies a simple box blur using the 3x3 neighbourhood around each pixel.
- * For edge pixels, only valid neighbouring pixels are included in the average.
- */
 public class Blur extends Converter {
 
     @Override

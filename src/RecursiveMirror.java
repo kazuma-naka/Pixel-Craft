@@ -1,9 +1,5 @@
 import java.awt.image.BufferedImage;
 
-/**
- * Mirrors the image horizontally using recursion only.
- * No loops are used in this converter.
- */
 public class RecursiveMirror extends Converter {
 
     @Override
@@ -17,15 +13,6 @@ public class RecursiveMirror extends Converter {
         return newImage;
     }
 
-    /**
-     * Recursively processes one row at a time.
-     *
-     * @param originalImage source image
-     * @param newImage      destination image
-     * @param y             current row
-     * @param width         image width
-     * @param height        image height
-     */
     private void processRows(
             BufferedImage originalImage,
             BufferedImage newImage,
@@ -41,15 +28,6 @@ public class RecursiveMirror extends Converter {
         processRows(originalImage, newImage, y + 1, width, height);
     }
 
-    /**
-     * Recursively processes one column at a time within a single row.
-     *
-     * @param originalImage source image
-     * @param newImage      destination image
-     * @param x             current column
-     * @param y             current row
-     * @param width         image width
-     */
     private void processColumns(
             BufferedImage originalImage,
             BufferedImage newImage,
@@ -62,7 +40,6 @@ public class RecursiveMirror extends Converter {
 
         int pixel = originalImage.getRGB(x, y);
 
-        // Mirror horizontally: (x, y) -> (width - 1 - x, y)
         newImage.setRGB(width - 1 - x, y, pixel);
 
         processColumns(originalImage, newImage, x + 1, y, width);

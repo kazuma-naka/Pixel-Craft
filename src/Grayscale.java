@@ -1,9 +1,5 @@
 import java.awt.image.BufferedImage;
 
-/**
- * Converts an image to grayscale by averaging the red, green, and blue values
- * of each pixel while preserving the alpha channel.
- */
 public class Grayscale extends Converter {
 
     @Override

@@ -1,8 +1,5 @@
 import java.awt.image.BufferedImage;
 
-/**
- * Darkens the image by reducing RGB values.
- */
 public class Darker extends Converter {
 
     @Override
