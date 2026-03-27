@@ -62,6 +62,7 @@ java -cp out PixelCraft Grayscale images/toronto.png
 java -cp out PixelCraft Rotate images/toronto.png
 java -cp out PixelCraft Blur images/toronto.png
 java -cp out PixelCraft RecursiveMirror images/toronto.png
+java -cp out PixelCraft RecursiveInvert images/toronto.png
 java -cp out PixelCraft Invert images/toronto.png
 java -cp out PixelCraft Warmer images/toronto.png
 java -cp out PixelCraft Darker images/toronto.png
