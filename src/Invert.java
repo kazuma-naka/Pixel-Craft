@@ -1,8 +1,5 @@
 import java.awt.image.BufferedImage;
 
-/**
- * Inverts the colours of the image.
- */
 public class Invert extends Converter {
 
     @Override

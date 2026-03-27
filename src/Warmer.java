@@ -1,8 +1,5 @@
 import java.awt.image.BufferedImage;
 
-/**
- * Makes the image warmer by increasing red and slightly decreasing blue.
- */
 public class Warmer extends Converter {
 
     @Override

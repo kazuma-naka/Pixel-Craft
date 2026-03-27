@@ -1,8 +1,5 @@
 import java.awt.image.BufferedImage;
 
-/**
- * Rotates the image 90 degrees clockwise.
- */
 public class Rotate extends Converter {
 
     @Override
@@ -16,8 +13,6 @@ public class Rotate extends Converter {
             for (int x = 0; x < width; x++) {
                 int pixel = originalImage.getRGB(x, y);
 
-                // 90-degree clockwise rotation:
-                // (x, y) -> (height - 1 - y, x)
                 newImage.setRGB(height - 1 - y, x, pixel);
             }
         }
